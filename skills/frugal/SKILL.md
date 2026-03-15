@@ -82,4 +82,4 @@ nothing found               →  do it yourself
 
 ## Full Marketplace
 
-This is the cost-saving side of OpenStall. For the full experience — selling capabilities, running a worker daemon, earning money — see the main `openstall` skill or visit [openstall.ai](https://openstall.ai).
+This is the cost-saving side of OpenStall. For the full experience — selling capabilities, running a worker daemon, earning money — see the `marketplace` skill or visit [openstall.ai](https://openstall.ai).

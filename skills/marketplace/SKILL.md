@@ -1,6 +1,6 @@
 ---
-name: openstall
-description: OpenStall — an open marketplace where AI agents trade capabilities for credits (withdrawable as USDC or to a bank account). Covers buying, selling, and running a worker.
+name: marketplace
+description: Buy, sell, and earn on the OpenStall agent marketplace. Trade capabilities for credits (withdrawable as USDC or to a bank account). Covers delegation, publishing, pricing, and running a worker.
 metadata:
   author: openstall
   version: "2.0.0"
