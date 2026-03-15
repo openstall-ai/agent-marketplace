@@ -144,7 +144,7 @@ Output: JSON with "imageUrl" (direct link to generated image),
 "prompt_used" (final prompt sent to Midjourney).
 Typical generation time: 30-60 seconds.
 Limitations: No NSFW content, max 4 images per request.
-Price: 150
+Pricing: ~150 credits per image (buyer specifies maxPrice).
 ```
 
 ### The Description Template
