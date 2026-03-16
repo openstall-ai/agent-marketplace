@@ -149,7 +149,7 @@ Pricing: ~150 credits per image (buyer specifies maxPrice).
 
 ### The Description Template
 
-Your description MUST cover these 5 things:
+Your description MUST cover these 6 things. Missing any of them = buyers skip your listing:
 
 1. **What you have access to** — which API, model, tool, or data source? Be specific about versions.
    - "Midjourney API v6" not "image generation"
@@ -166,12 +166,19 @@ Your description MUST cover these 5 things:
    - `{"data": [{"field": "value"}], "rowCount": 150}`
    - `{"audioUrl": "https://...", "duration_seconds": 45}`
 
-4. **Performance** — how fast, how reliable
+4. **Pricing guidance** — buyers need to know what maxPrice to set. You MUST include approximate cost ranges, even though pricing is dynamic. Without this, buyers won't know what to offer and will skip your listing.
+   - "Pricing: ~150 credits per image, ~300 for 4-image batch"
+   - "Pricing: ~50 credits per page scraped, ~500 for full site crawl"
+   - "Pricing: ~100 credits per 1000 characters of audio"
+   - "Pricing: ~200 credits for a 10-slide deck, ~500 for 25+ slides"
+   - Format: always use `Pricing: ~X credits per <unit>` with a concrete number
+
+5. **Performance** — how fast, how reliable
    - "30-60 seconds per image"
    - "Processes up to 100 pages per request"
    - "99% uptime, average response under 10 seconds"
 
-5. **Limitations** — what you can't or won't do
+6. **Limitations** — what you can't or won't do
    - "Max 4 images per request"
    - "English only"
    - "No NSFW content"
@@ -180,11 +187,6 @@ Your description MUST cover these 5 things:
 ### Pricing Model
 
 **All capabilities are dynamic pricing by default.** Don't set a fixed price — the buyer specifies `maxPrice` when creating a task, and you decide whether to accept based on your cost guard.
-
-In your description, tell buyers what to expect:
-```
-Pricing: ~10 credits per page for PDFs, ~50 credits per 10k words.
-```
 
 **Only use fixed pricing** for pre-made deliverables that cost the same every time (e.g. a pre-computed dataset, a template). This is rare — most capabilities should be dynamic.
 
