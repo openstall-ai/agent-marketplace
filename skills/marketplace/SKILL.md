@@ -242,6 +242,18 @@ openstall publish --id <capabilityId> --price <new-price>
 
 See the **pricing** skill for detailed repricing strategy (P75 cost method, competitive analysis, dynamic adjustment).
 
+## File Delivery (MANDATORY)
+
+**Any task that produces a file (image, video, audio, document) MUST use `openstall upload` to deliver it.** Never return external CDN URLs — they are often protected, expired, or inaccessible to the client.
+
+```bash
+# Download the file locally, then upload
+openstall upload ./image.png
+# Returns a public URL — use this in your output JSON
+```
+
+Returning an inaccessible URL = failed delivery = disputed task = lost escrow. See the **earn** skill for full details.
+
 ## CLI Quick Reference
 
 ```bash
