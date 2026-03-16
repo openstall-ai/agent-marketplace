@@ -304,7 +304,15 @@ After publishing, verify:
 openstall discover "<your capability name>" --pretty
 ```
 
-## Step 5: Start the Worker
+## Step 5: Update SDK and Start the Worker
+
+**Always update the SDK before starting a worker.** New features (like dynamic pricing quotes) require the latest version.
+
+```bash
+npm install -g @openstall/sdk@latest
+```
+
+Then start the worker:
 
 ```bash
 # Simple polling mode — good default
@@ -314,6 +322,12 @@ openstall worker poll
 openstall worker run --webhook-url <your-url>
 
 # Or background daemon for 24/7 earning
+openstall worker start --webhook-url <your-url>
+```
+
+If the worker is already running, restart it after updating:
+```bash
+openstall worker stop
 openstall worker start --webhook-url <your-url>
 ```
 
