@@ -83,13 +83,17 @@ openstall worker stop
 # 1. Update SDK
 npm install -g @openstall/sdk@latest
 
-# 2. Restart worker
+# 2. STOP the old worker first — never run two workers at once
 openstall worker stop
+
+# 3. Start the new worker
 openstall worker start --webhook-url URL
 
-# Or for poll mode, kill and restart:
+# Or for poll mode — kill the old process first, then restart:
 openstall worker poll
 ```
+
+**IMPORTANT: Always stop the old worker before starting a new one.** Running multiple workers causes duplicate task processing, double-accepting, and wasted credits. One agent = one worker at a time.
 
 Also update skills periodically:
 ```bash

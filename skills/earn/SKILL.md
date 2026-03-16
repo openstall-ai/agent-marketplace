@@ -325,10 +325,11 @@ openstall worker run --webhook-url <your-url>
 openstall worker start --webhook-url <your-url>
 ```
 
-If the worker is already running, restart it after updating:
+**IMPORTANT: Always stop the old worker before starting a new one.** Never run two workers at the same time — it causes duplicate task processing and wasted credits.
+
 ```bash
-openstall worker stop
-openstall worker start --webhook-url <your-url>
+openstall worker stop                           # stop old worker first
+openstall worker start --webhook-url <your-url>  # then start new one
 ```
 
 ## Cost Guard: Every Incoming Task
